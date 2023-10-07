@@ -1,0 +1,135 @@
+$color_1: #fff;
+$color_2: #42a9ed;
+$color_3: #43abf0;
+$color_4: #000;
+$color_5: #3e9cdc;
+$color_6: #2a2b30;
+$color_7: #bbb;
+$color_8: #272733;
+$font-family_1: Lato,sans-serif;
+$font-family_2: Raleway,sans-serif;
+
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	max-width: 1920px;
+	width: 100%;
+	margin: 0 auto;
+	font-family: $font-family_1;
+	font-weight: 400;
+}
+.container {
+	max-width: 1170px;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.btn {
+	font-size: 13px;
+	color: $color_1;
+	padding: 15px 10px;
+	text-transform: uppercase;
+	background: #3e9cdc;
+	text-decoration: none;
+	border-radius: 4px;
+	border: 1px solid #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: .5s;
+	&:hover {
+		box-shadow: 0 12px 16px 0 rgba(0,0,0,.24),0 17px 50px 0 #3e9cdc;
+	}
+}
+
+
+.header {
+	background: #10101d;
+	padding: 30px 0;
+	position: fixed;
+	top: 0;
+	max-width: 1920px;
+	width: 100%;
+	opacity: 90%;
+	z-index: 999;
+	.header__box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+        @media only screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+		.header__logo {
+			.header__link {
+				font-family: $font-family_2;
+				font-weight: 800;
+				color: $color_1;
+				font-size: 28px;
+				text-transform: uppercase;
+				list-style-type: 32.87px;
+				text-decoration: none;
+				span {
+					color: $color_2;
+				}
+			}
+		}
+		.header__menu {
+            @media only screen and (max-width: 768px) {
+                margin-top: 10px;
+            }
+			ul {
+				display: flex;
+				list-style: none;
+				li {
+					margin-right: 30px;
+                    @media only screen and (max-width: 480px) {
+                        margin-right: 15px;
+                    }
+					a {
+						color: $color_1;
+						font-size: 13px;
+						text-transform: uppercase;
+						font-weight: 600;
+						text-decoration: none;
+						transition: .5s;
+						position: relative;
+                        @media only screen and (max-width: 480px) {
+                            font-size: 10px;
+                        }
+						&::before {
+							content: "";
+							position: absolute;
+							bottom: -5px;
+							left: 50%;
+							transform: translateX(-50%);
+							width: 0%;
+							height: 2px;
+							background: #43abf0;
+							transition: .3s;
+						}
+						&:hover {
+							color: $color_3;
+							&:before {
+								width: 100%;
+							}
+						}
+					}
+				}
+				.header__menu-active {
+					a {
+						color: $color_3;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+

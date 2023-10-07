@@ -1,0 +1,188 @@
+.formsend {
+	background-image: url(../img/main.jpg);
+	padding: 120px 0 150px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+    @media only screen and (max-width: 480px) {
+        padding: 60px 0 80px;
+    }
+	.formsend__box {
+		h2 {
+			font-weight: 800;
+			color: $color_1;
+			font-size: 36px;
+			text-transform: uppercase;
+			text-align: center;
+            @media only screen and (max-width: 480px) {
+                font-size: 24px;
+            }
+			span {
+				color: $color_5;
+			}
+		}
+		p {
+			color: $color_7;
+			font-size: 18px;
+			text-align: center;
+            margin-top:30px;
+		}
+		ul {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			margin: 80px 0;
+			list-style: none;
+			text-align: center;
+			gap: 30px;
+            @media only screen and (max-width: 1200px) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @media only screen and (max-width: 768px) {
+                grid-template-columns: 1fr 1fr;
+            }
+            @media only screen and (max-width: 480px) {
+                grid-template-columns: 1fr;
+            }
+			li {
+				position: relative;
+				&:last-child {
+					&::before {
+						display: none;
+					}
+				}
+				&:nth-child(5n) {
+					&::before {
+						display: none;
+					}
+				}
+				&::before {
+					content: "";
+					position: absolute;
+					background-image: url(../img/grupelips.svg);
+					width: 110px;
+					height: 6px;
+					top: 50px;
+					right: -70px;
+                    @media only screen and (max-width: 1200px) {
+                        display: none;
+                    }
+				}
+				span {
+					font-size: 16px;
+					color: $color_1;
+					display: block;
+					margin-top: 20px;
+					min-height: 45px;
+				}
+			}
+		}
+	}
+}
+.formsend__form {
+	.formsend__form-top {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 30px;
+        @media only screen and (max-width: 1200px) {
+            grid-template-columns: 568px;
+			justify-content: center;
+        }
+        @media only screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+		select {
+			color: $color_8;
+			font-size: 18px;
+			border-radius: 3px;
+			background: #fff;
+		}
+		input {
+			color: $color_8;
+			font-size: 18px;
+			border-radius: 3px;
+			background: #fff;
+			padding: 13px 10px;
+		}
+	}
+	.btn {
+		max-width: 370px;
+		width: 100%;
+		cursor: pointer;
+        @media only screen and (max-width: 1200px) {
+            margin: 0 auto;
+        }
+	}
+}
+.formsend__form-bottom {
+	display: grid;
+	grid-template-columns: 750px 360px;
+	gap: 30px;
+	margin-top: 30px;
+	margin-bottom: 40px;
+    @media only screen and (max-width: 1200px) {
+        grid-template-columns: 568px;
+		justify-content: center;
+    }
+    @media only screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+	.range {
+		.rang__text {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 10px;
+			span {
+				font-size: 18px;
+				color: $color_1;
+			}
+			.range__value {
+				color: $color_1;
+				font-weight: 600;
+				font-size: 18px;
+			}
+		}
+		input[type=range] {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			width: 100%;
+			cursor: pointer;
+			outline: 0;
+			border-radius: 15px;
+			height: 6px;
+			background: #bdbdc0;
+			border: 1px solid #fff;
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				appearance: none;
+				height: 15px;
+				width: 15px;
+				background: #42a9ed;
+				border: 3px solid #286690;
+				border-radius: 50%;
+				border: none;
+				-webkit-transition: .2s ease-in-out;
+				transition: .2s ease-in-out;
+			}
+		}
+	}
+	.formsend__file {
+		label {
+			border: 2px solid #3e9cdc;
+			background: #fff;
+			border-radius: 3px;
+			padding: 12px 10px;
+			transition: .5s;
+			color: $color_8;
+			font-weight: 600;
+			font-size: 15px;
+			text-transform: uppercase;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			img {
+				margin-right: 10px;
+			}
+		}
+	}
+}

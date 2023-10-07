@@ -1,0 +1,92 @@
+.footer {
+	background: #3d4050;
+	padding: 30px;
+	.footer__box {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+        @media only screen and (max-width: 1200px) {
+            display: grid;
+			grid-template-columns: 1fr 1fr;
+        }
+        @media only screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+		.footer__policy {
+			p {
+				font-size: 13px;
+				color: $color_1;
+			}
+		}
+		.footer__payments {
+			display: flex;
+			position: relative;
+            @media only screen and (max-width: 768px) {
+                margin: 15px 0;
+            }
+            @media only screen and (max-width: 480px) {
+                flex-wrap: wrap;
+				gap: 15px;
+            }
+			&::before {
+				content: "";
+				position: absolute;
+				background: #c3c3c3;
+				width: 1px;
+				height: 18px;
+				top: 0;
+				left: 0;
+                @media only screen and (max-width: 1200px) {
+                    display: none;
+                }
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				background: #c3c3c3;
+				width: 1px;
+				height: 18px;
+				top: 0;
+				right: -38px;
+                @media only screen and (max-width: 1200px) {
+                    display: none;
+                }
+			}
+			img {
+				margin-left: 38px;
+                @media only screen and (max-width: 768px) {
+                    margin-left: 0;
+					margin-right: 38px;
+                }
+			}
+		}
+		.footer__contacts {
+			display: flex;
+			a {
+				display: flex;
+				align-items: center;
+				font-size: 13px;
+				color: $color_1;
+				text-decoration: none;
+				margin-left: 38px;
+				transition: .5s;
+                @media only screen and (max-width: 1200px) {
+                    margin-left: 0;
+					margin-right: 30px;
+                }
+                @media only screen and (max-width: 480px) {
+                    flex-wrap: wrap;
+				    gap: 15px;
+                }
+				&:hover {
+					text-decoration: underline;
+					color: $color_3;
+				}
+				img {
+					margin-right: 10px;
+					display: block;
+				}
+			}
+		}
+	}
+}
